@@ -27,7 +27,10 @@ function Header() {
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#action1">Home</Nav.Link>
                 </Nav>
-                <Form className="d-flex">
+              </Offcanvas.Body>
+            </Navbar.Offcanvas>
+          </Container>
+          <Form className="d-flex search-container">
                   <Form.Control
                     type="search"
                     placeholder="Search"
@@ -36,9 +39,6 @@ function Header() {
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
-              </Offcanvas.Body>
-            </Navbar.Offcanvas>
-          </Container>
         </Navbar>
       ))}
     </>

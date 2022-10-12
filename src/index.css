@@ -5,11 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1b263b;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.arrow-container {
+  float: right;
 }
 
 .img-container {
@@ -42,7 +47,7 @@ code {
   font-weight: bold;
   color: black;
   position: absolute;
-  top: 87%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -56,6 +61,19 @@ code {
   font-weight: bold;
 }
 
+.search-container {
+margin-right: 2rem;
+}
+
+.stats {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #1b263b;
+  padding-left: 4rem;
+  margin: 5px;
+}
+
 .card {
 padding: 5px;
 border: none;
@@ -63,34 +81,23 @@ border-radius: 0;
 height: 10rem;
 }
 
-.card:nth-child(1),
-.card:nth-child(4),
-.card:nth-child(5),
-.card:nth-child(8),
-.card:nth-child(9),
-.card:nth-child(12),
-.card:nth-child(13),
-.card:nth-child(16),
-.card:nth-child(17),
-.card:nth-child(20){
-  background-color: #778da9;
-}
-
-.card:nth-child(2),
-.card:nth-child(3),
-.card:nth-child(6),
-.card:nth-child(7),
-.card:nth-child(10),
-.card:nth-child(11),
-.card:nth-child(14),
-.card:nth-child(15),
-.card:nth-child(18),
-.card:nth-child(19){
+.card:nth-child(4n + 1),
+.card:nth-child(4n + 4) {
   background-color: #415a77;
 }
 
+.card:nth-child(4n + 2),
+.card:nth-child(4n + 3) {
+  background-color: #778da9;
+}
+
 .card-title {
-  font-size: 1.5rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.card-info {
+  color: white;
 }
 
 .stock-item {
@@ -101,11 +108,12 @@ height: 10rem;
 
 @media screen and (max-width: 768px) {
   .homepageimg {
+    margin-top: 30%;
     height: auto;
   }
 
   .navbar-name {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .stock-item {
@@ -124,4 +132,18 @@ height: 10rem;
   font-size: 0.8rem;
   width: 100%;
 }
+
+.search-container {
+  margin-left: 0.5rem;
+  }
+
+  .search-container > input {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .stats {
+    font-size: 15px;
+    margin: 0;
+  }
 }

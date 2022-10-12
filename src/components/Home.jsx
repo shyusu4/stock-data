@@ -11,6 +11,7 @@ function Home() {
       <div className="main-text">The real earning starts here.</div>
       <p className='caption'>find real-time stock prices below <span>&#8595;</span></p>
       </div>
+      <div className='stats'>Stats by company</div>
       <StockDisplay />
     </div>
   );
