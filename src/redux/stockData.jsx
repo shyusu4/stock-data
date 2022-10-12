@@ -1,7 +1,56 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { getSymbolsData, getCompaniesData } from "./fetchData";
 
-//API key cea63023bbdb710b328c1a9a365eea22
-// https://financialmodelingprep.com/api/v3/search?query=AA&limit=9999&exchange=NASDAQ&apikey=cea63023bbdb710b328c1a9a365eea22
-const GET_STOCKDATA = 'stock-data/GET_STOCKDATA';
+const GET_SYMBOLS = 'stock-data/GET_SYMBOLS';
+const GET_COMPANIES = 'stock-data/GET_COMPANIES';
 
-const initialState = [];
+const initialState = {
+  loading: true,
+};
+
+const getSymbols = (data) => ({
+  type: GET_SYMBOLS,
+  payload: data,
+});
+
+const getCompanies = (data) => ({
+  type: GET_COMPANIES,
+  payload: data,
+});
+
+const dispatchSymbols = () => async (dispatch) => {
+  const symbolsList = await getSymbolsData();
+  const symbols = getSymbols(symbolsList);
+  dispatch(symbols);
+};
+
+const dispatchCompanies = (company) => async (dispatch) => {
+  const profile = await getCompaniesData(company);
+  dispatch(getCompanies(profile));
+};
+
+const stockReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_SYMBOLS:
+      return {
+        ...state,
+        isSymbolsStored: true,
+        symbols: action.payload,
+        filteredSymbols: action.payload,
+        nbResult: action.payload.length,
+        loading: false,
+      };
+
+    case GET_COMPANIES: {
+      return {
+        ...state,
+        company: action.payload,
+      };
+    }
+
+    default:
+      return state;
+  }
+};
+
+export default stockReducer;
+export {dispatchSymbols, dispatchCompanies}

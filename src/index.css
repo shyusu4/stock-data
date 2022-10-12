@@ -11,3 +11,117 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.homepageimg {
+  height: 50em;
+  width: 100%;
+}
+
+.main-text {
+  font-size: 5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  background-color: #1b263b;
+  border-radius: 5px;
+  line-height: 4.4rem;
+}
+
+.caption {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar {
+  background-color: #1b263b;
+}
+
+.navbar-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card {
+padding: 5px;
+border: none;
+border-radius: 0;
+height: 10rem;
+}
+
+.card:nth-child(1),
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(8),
+.card:nth-child(9),
+.card:nth-child(12),
+.card:nth-child(13),
+.card:nth-child(16),
+.card:nth-child(17),
+.card:nth-child(20){
+  background-color: #778da9;
+}
+
+.card:nth-child(2),
+.card:nth-child(3),
+.card:nth-child(6),
+.card:nth-child(7),
+.card:nth-child(10),
+.card:nth-child(11),
+.card:nth-child(14),
+.card:nth-child(15),
+.card:nth-child(18),
+.card:nth-child(19){
+  background-color: #415a77;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.stock-item {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .homepageimg {
+    height: auto;
+  }
+
+  .navbar-name {
+    font-size: 1rem;
+  }
+
+  .stock-item {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  
+.main-text {
+  font-size: 1.6em;
+  padding: 5px;
+  line-height: 1.5rem;
+}
+
+.caption {
+  font-size: 0.8rem;
+  width: 100%;
+}
+}
