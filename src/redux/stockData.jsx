@@ -1,7 +1,7 @@
 import { getSymbolsData, getCompaniesData } from './fetchData';
 
 export const GET_SYMBOLS = 'stock-data/GET_SYMBOLS';
-const GET_COMPANIES = 'stock-data/GET_COMPANIES';
+export const GET_COMPANIES = 'stock-data/GET_COMPANIES';
 
 const initialState = {
   loading: true,

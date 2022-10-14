@@ -46,7 +46,7 @@ Give a ⭐️ if you like this project!
 
 - Microverse
 - [Financial Modeling Prep API](https://site.financialmodelingprep.com/developer/docs/)
-- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) under [Creative Commons License](https://creativecommons.org/licenses/by-nc/4.0/)
 
 ## 📝 License
 
