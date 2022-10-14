@@ -1,6 +1,6 @@
 import { getSymbolsData, getCompaniesData } from './fetchData';
 
-const GET_SYMBOLS = 'stock-data/GET_SYMBOLS';
+export const GET_SYMBOLS = 'stock-data/GET_SYMBOLS';
 const GET_COMPANIES = 'stock-data/GET_COMPANIES';
 
 const initialState = {
