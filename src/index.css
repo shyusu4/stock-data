@@ -14,6 +14,7 @@ code {
 }
 
 .arrow-container {
+  cursor: pointer;
   float: right;
 }
 
@@ -52,6 +53,11 @@ code {
   transform: translate(-50%, -50%);
 }
 
+.searchbar {
+  margin-left: 35%;
+  width: 50%;
+}
+
 .navbar {
   background-color: #1b263b;
 }
@@ -61,10 +67,6 @@ code {
   font-weight: bold;
 }
 
-.search-container {
-margin-right: 2rem;
-}
-
 .stats {
   color: white;
   text-transform: uppercase;
@@ -72,6 +74,10 @@ margin-right: 2rem;
   background-color: #1b263b;
   padding-left: 4rem;
   margin: 5px;
+}
+
+.stats-text {
+  vertical-align: center;
 }
 
 .card {
@@ -106,9 +112,46 @@ height: 10rem;
   width: 100%;
 }
 
+.details-img-div {
+  display: flex;
+  justify-content: center;
+  padding: 8% 5rem;
+  background-color: #526175;
+}
+
+.details-img {
+  width: 20%;
+}
+
+.stats-breakdown {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #1b263b;
+  padding-left: 5%;
+  margin: 5px;
+}
+
+.details-metric {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+
+.details-metric:nth-child(even) {
+  background-color: #415a77;
+}
+
+.details-metric:nth-child(odd) {
+  background-color: #778da9;
+}
+
 @media screen and (max-width: 768px) {
   .homepageimg {
-    margin-top: 30%;
+    margin-top: 10%;
     height: auto;
   }
 
@@ -145,5 +188,31 @@ height: 10rem;
   .stats {
     font-size: 15px;
     margin: 0;
+  }
+
+  .details-img {
+    margin-top: 20%;
+    width: 80%;
+  }
+
+  .stats {
+padding-left: 2rem;
+  }
+
+  .stats-text {
+    padding-right: 5%;
+  }
+
+  .searchbar {
+    margin-left: 0;
+    margin-right: 2%;
+  }
+
+  .stats-breakdown {
+    padding-left: 10%;
+  }
+
+  .details-metric {
+    font-size: 15px;
   }
 }

@@ -1,6 +1,7 @@
 import Header from './Header';
 import StockDisplay from './StockDisplay';
 import homepageimg from '../img/home.jpg'
+import Search from './Search';
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
       <div className="main-text">The real earning starts here.</div>
       <p className='caption'>find real-time stock prices below <span>&#8595;</span></p>
       </div>
-      <div className='stats'>Stats by company</div>
+      <Search/>
       <StockDisplay />
     </div>
   );

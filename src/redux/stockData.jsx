@@ -7,14 +7,14 @@ const initialState = {
   loading: true,
 };
 
-const getSymbols = (data) => ({
+const getSymbols = (id) => ({
   type: GET_SYMBOLS,
-  payload: data,
+  payload: id,
 });
 
-const getCompanies = (data) => ({
+const getCompanies = (id) => ({
   type: GET_COMPANIES,
-  payload: data,
+  payload: id,
 });
 
 const dispatchSymbols = () => async (dispatch) => {

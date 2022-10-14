@@ -5,7 +5,7 @@ import Stock from './Stock';
 
 const StockDisplay = () => {
   const dispatch = useDispatch();
-  const stocksHandler = useSelector((state) => state.stockReducer.stocksHandler || false,);
+  const stocksHandler = useSelector((state) => state.stockReducer.stocksHandler);
   const stocks = useSelector((state) => state.stockReducer.filteredSymbols || [],);
 
   useEffect(() => {

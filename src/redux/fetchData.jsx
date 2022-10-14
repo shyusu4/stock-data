@@ -15,7 +15,7 @@ const getSymbolsData = async () => {
 };
 
 const getCompaniesData = async (company) => {
-  const getApi = await axios.get(`${companiesUrl}${company}?apikey=cea63023bbdb710b328c1a9a365eea22`);
+  const getApi = await axios.get(`${companiesUrl}${company}?apikey=d70b4d5845c84ca26522d88082adf9d0`);
   const result = getApi.data[0];
   return result;
 };
