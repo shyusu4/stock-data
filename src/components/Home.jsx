@@ -1,7 +1,6 @@
 import Header from './Header';
 import StockDisplay from './StockDisplay';
 import homepageimg from '../img/home.jpg';
-import Search from './Search';
 
 function Home() {
   return (
@@ -16,7 +15,6 @@ function Home() {
           <span>&#8595;</span>
         </p>
       </div>
-      <Search />
       <StockDisplay />
     </div>
   );
