@@ -1,4 +1,4 @@
-import { getSymbolsData, getCompaniesData } from "./fetchData";
+import { getSymbolsData, getCompaniesData } from './fetchData';
 
 const GET_SYMBOLS = 'stock-data/GET_SYMBOLS';
 const GET_COMPANIES = 'stock-data/GET_COMPANIES';
@@ -7,14 +7,14 @@ const initialState = {
   loading: true,
 };
 
-const getSymbols = (data) => ({
+const getSymbols = (id) => ({
   type: GET_SYMBOLS,
-  payload: data,
+  payload: id,
 });
 
-const getCompanies = (data) => ({
+const getCompanies = (id) => ({
   type: GET_COMPANIES,
-  payload: data,
+  payload: id,
 });
 
 const dispatchSymbols = () => async (dispatch) => {
@@ -53,4 +53,4 @@ const stockReducer = (state = initialState, action) => {
 };
 
 export default stockReducer;
-export {dispatchSymbols, dispatchCompanies}
+export { dispatchSymbols, dispatchCompanies };

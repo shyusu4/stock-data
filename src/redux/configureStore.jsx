@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { legacy_createStore as createStore, applyMiddleware, combineReducers } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';

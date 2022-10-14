@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+/* eslint-disable */
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { dispatchSymbols } from '../redux/stockData'
+import Form from 'react-bootstrap/Form';
+import { dispatchSymbols } from '../redux/stockData';
 import Stock from './Stock';
 
 const StockDisplay = () => {
   const dispatch = useDispatch();
-  const stocksHandler = useSelector((state) => state.stockReducer.stocksHandler || false,);
-  const stocks = useSelector((state) => state.stockReducer.filteredSymbols || [],);
+  const stocks = useSelector((state) => state.stockReducer.filteredSymbols || []);
+  const [query, setQuery] = useState('');
 
   useEffect(() => {
     if (!stocks.length) {
@@ -15,23 +17,43 @@ const StockDisplay = () => {
   });
 
   return (
-    <div className='stock-container'>
-      <div className='stock-item'>
-        {stocks.map((stock) => (
-          <Stock
-            key={stock.symbol}
-            symbol={stock.symbol}
-            name={stock.name}
-            price={stock.price}
-            exchange={stock.exchange}
-            exchangeShortName={stock.exchangeShortName}
+    <>
+      <div className="stats">
+        <Form className="d-flex">
+          <p className="stats-text">Stats by company</p>
+          <Form.Control
+            type="search"
+            placeholder="Search by company name or symbol"
+            className="searchbar"
+            aria-label="Search"
+            onChange={(e) => setQuery(e.target.value)}
           />
-        ))}
-        {stocks.length === 0 && stocksHandler && (
-          <span>COMPANY NOT FOUND</span>
-        )}
+        </Form>
       </div>
-    </div>
+      <div className="stock-container">
+        {
+            stocks.filter((stock) => {
+              if (query === '') {
+                return stock;
+              } if (stock.name.toLowerCase().includes(query.toLowerCase()) || stock.symbol.toLowerCase().includes(query.toLowerCase())) {
+                return stock;
+              }
+            }).map((stock, index) => (
+              <div className="stock-item" key={index}>
+                <Stock
+                  key={stock.symbol}
+                  symbol={stock.symbol}
+                  name={stock.name}
+                  price={stock.price}
+                  exchange={stock.exchange}
+                  exchangeShortName={stock.exchangeShortName}
+                />
+              </div>
+            ))
+}
+      </div>
+      
+    </>
   );
 };
 
