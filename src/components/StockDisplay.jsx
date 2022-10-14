@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { dispatchSymbols } from '../redux/stockData'
+import { dispatchSymbols } from '../redux/stockData';
 import Stock from './Stock';
 
 const StockDisplay = () => {
   const dispatch = useDispatch();
-  const stocksHandler = useSelector((state) => state.stockReducer.stocksHandler);
-  const stocks = useSelector((state) => state.stockReducer.filteredSymbols || [],);
+  const stocks = useSelector((state) => state.stockReducer.filteredSymbols || []);
 
   useEffect(() => {
     if (!stocks.length) {
@@ -15,8 +14,8 @@ const StockDisplay = () => {
   });
 
   return (
-    <div className='stock-container'>
-      <div className='stock-item'>
+    <div className="stock-container">
+      <div className="stock-item">
         {stocks.map((stock) => (
           <Stock
             key={stock.symbol}
@@ -27,9 +26,6 @@ const StockDisplay = () => {
             exchangeShortName={stock.exchangeShortName}
           />
         ))}
-        {stocks.length === 0 && stocksHandler && (
-          <span>COMPANY NOT FOUND</span>
-        )}
       </div>
     </div>
   );

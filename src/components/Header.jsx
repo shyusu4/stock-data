@@ -10,7 +10,7 @@ function Header() {
       {['lg'].map((expand) => (
         <Navbar key={expand} variant="dark" expand={expand} className="mb-3 fixed-top navbar">
           <Container fluid>
-            <Navbar.Brand href="#" className='navbar-name'>Stock Market Metrics</Navbar.Brand>
+            <Navbar.Brand href="#" className="navbar-name">Stock Market Metrics</Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -19,7 +19,7 @@ function Header() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                Stock Market Metrics
+                  Stock Market Metrics
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
