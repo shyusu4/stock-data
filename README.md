@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-[Live]()
+[Live](https://634a40c19f59c75a5997a054--inquisitive-kheer-dffc53.netlify.app/)
 
 ## Built with
 
