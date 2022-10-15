@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayDetails Check if DisplayDetails component renders correctly 1`] = `
+Array [
+  <nav
+    className="mb-3 fixed-top navbar navbar navbar-expand-lg navbar-dark"
+  >
+    <div
+      className="container-fluid"
+    >
+      <a
+        className="navbar-name navbar-brand"
+        href="#"
+      >
+        Stock Market Metrics
+      </a>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <svg
+          className="text-white fw-bolder fs-3"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          strokeWidth="0"
+          style={
+            Object {
+              "color": undefined,
+            }
+          }
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </a>
+    </div>
+  </nav>,
+  <div
+    className="details-container"
+  >
+    <div
+      className="details-header"
+    >
+      <div
+        className="details-img-div"
+      >
+        <img
+          alt="company logo"
+          className="details-img img-fluid"
+        />
+      </div>
+      <p
+        className="stats-breakdown"
+      >
+        Stats Breakdown
+      </p>
+    </div>
+    <div
+      className="details-body"
+    >
+      <div
+        className="details-metric"
+      >
+        <p>
+          Company Name:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Symbol:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Currency:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Exchange:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Price:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Range:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Changes:
+           
+        </p>
+      </div>
+      <div
+        className="details-metric"
+      >
+        <p>
+          Market Cap:
+           
+        </p>
+      </div>
+    </div>
+  </div>,
+]
+`;

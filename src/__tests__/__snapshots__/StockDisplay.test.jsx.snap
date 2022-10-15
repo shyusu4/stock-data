@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockDisplay Check if StockDisplay component renders correctly 1`] = `
+Array [
+  <div
+    className="stats"
+  >
+    <form
+      className="d-flex"
+    >
+      <p
+        className="stats-text"
+      >
+        Stats by company
+      </p>
+      <input
+        aria-label="Search"
+        className="searchbar form-control"
+        onChange={[Function]}
+        placeholder="Search by company name or symbol"
+        type="search"
+      />
+    </form>
+  </div>,
+  <div
+    className="stock-container"
+  />,
+]
+`;

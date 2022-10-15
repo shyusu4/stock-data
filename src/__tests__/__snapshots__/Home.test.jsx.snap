@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Check if Home component renders correctly 1`] = `
+<div>
+  <nav
+    className="mb-3 fixed-top navbar navbar navbar-expand-lg navbar-dark"
+  >
+    <div
+      className="container-fluid"
+    >
+      <a
+        className="navbar-name navbar-brand"
+        href="#"
+      >
+        Stock Market Metrics
+      </a>
+      <button
+        aria-controls="offcanvasNavbar-expand-lg"
+        aria-label="Toggle navigation"
+        className="navbar-toggler collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="navbar-toggler-icon"
+        />
+      </button>
+      <div
+        aria-labelledby="offcanvasNavbarLabel-expand-lg"
+        className="offcanvas offcanvas-end"
+        id="offcanvasNavbar-expand-lg"
+      >
+        <div
+          className="offcanvas-header"
+        >
+          <div
+            className="offcanvas-title h5"
+            id="offcanvasNavbarLabel-expand-lg"
+          >
+            Stock Market Metrics
+          </div>
+          <button
+            aria-label="Close"
+            className="btn-close"
+            onClick={[Function]}
+            type="button"
+          />
+        </div>
+        <div
+          className="offcanvas-body"
+        >
+          <div
+            className="justify-content-end flex-grow-1 pe-3 navbar-nav"
+            onKeyDown={[Function]}
+          >
+            <a
+              className="nav-link"
+              data-rr-ui-event-key="#"
+              href="#"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="img-container"
+  >
+    <img
+      alt="stocks"
+      className="homepageimg"
+      src="home.jpg"
+    />
+    <div
+      className="main-text"
+    >
+      The real earning starts here.
+    </div>
+    <p
+      className="caption"
+    >
+      find real-time stock prices below
+       
+      <span>
+        ↓
+      </span>
+    </p>
+  </div>
+  <div
+    className="stats"
+  >
+    <form
+      className="d-flex"
+    >
+      <p
+        className="stats-text"
+      >
+        Stats by company
+      </p>
+      <input
+        aria-label="Search"
+        className="searchbar form-control"
+        onChange={[Function]}
+        placeholder="Search by company name or symbol"
+        type="search"
+      />
+    </form>
+  </div>
+  <div
+    className="stock-container"
+  />
+</div>
+`;
